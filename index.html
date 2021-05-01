@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Ecochlor Simulation</title>
+        <link rel="icon" href="https://ecochlor.com/wp-content/uploads/2019/11/cropped-ECO-logo-fullcolor-32x32.png" sizes="32x32">
+        <link href="/styles/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <h1 class="header__title">Ecochlor Simulator</h1>
+                <h2 class="header__subtitle">Simulate Ballast Water Treatment</h2>
+            </div>
+        </header>
+        <div class="container">
+            <div class="hmi">
+                <div class="hmi-header">
+                    <div class="hmi-header__image">
+                        <img src="images/Ecochlor logo BB.png" class="hmi-header__logo" />
+                    </div>
+                    <div class="hmi-header__text">Stbd</div>
+                    <div class="hmi-header__status" id="stbd-status"></div>
+                    <div class="hmi-header__text">Port</div>
+                    <div class="hmi-header__status" id="port-status"></div>
+                    <div class="hmi-header__text">AftP</div>
+                    <div class="hmi-header__status" id="aftp-status"></div>
+                    <div class="hmi-header__text">Gen</div>
+                    <div class="hmi-header__status" id="gene-status"></div>
+                    <div class="hmi-header__date" id="hmi-header__date">date</div>
+                    <div class="hmi-header__text">Alarm</div>
+                    <div class="hmi-header__last-alarm" id="hmi-header__last-alarm"></div>
+                    <div class="hmi-header__time" id="hmi-header__time">time</div>
+                </div>
+                <div class="hmi-menu" id="hmi-menu"></div>
+                    <div class="hmi-body" id="hmi-body">
+                    <div class="hmi-body" id="hmi-body--images"></div>
+                    <div class="hmi-body" id="hmi-body--text"></div>
+                    <div class="hmi-body" id="hmi-body--variables"></div>
+                    <div class="hmi-body" id="hmi-body--buttons"></div>
+                    <div class="alarm-dialog" id="alarm-dialog"></div>
+                </div>
+                <div class="hmi-buttons" id="hmi-buttons"></div>
+        </div>
+            <div class="pumpcont">
+                <div class = 'pctitle'> Starboard Pump </div>
+                <button id="start-stbd-pump" class="button">Start Pump</button> 
+                <button id="stop-stbd-pump" class="button">Stop Pump</button>        
+                <div class="stbd-adj-container">
+                    <div class="slider__title">Ballast Flow</div> <div class="slider__value" id="stbd-adj-flow-value"></div>
+                    <input type="range" min="0" max="35" class="slider" id="stbd-flow">
+                    <div class="slider__title">Diff Pressure</div> <div class="slider__value" id="stbd-adj-dp-value"></div>
+                    <input type="range" min="0" max="30" class="slider" id="stbd-dp">
+                    <div class="slider__title">Out Pressure</div> <div class="slider__value" id="stbd-adj-op-value"></div>
+                    <input type="range" min="0" max="60" class="slider" id="stbd-outlet-pressure">
+                </div>
+            </div>
+            <div class="pumpcont">
+                <div class = 'pctitle'> Aft Peak Pump </div>
+                <button id="start-aftp-pump" class="button">Start Pump</button> 
+                <button id="stop-aftp-pump" class="button">Stop Pump</button>        
+                <div class="aftp-adj-container">
+                    <div class="slider__title">Ballast Flow</div> <div class="slider__value" id="aftp-adj-flow-value"></div>
+                    <input type="range" min="0" max="35" class="slider" id="aftp-flow">
+                    <div class="slider__title">Diff Pressure</div> <div class="slider__value" id="aftp-adj-dp-value"></div>
+                    <input type="range" min="0" max="30" class="slider" id="aftp-dp">
+                    <div class="slider__title">Out Pressure</div> <div class="slider__value" id="aftp-adj-op-value"></div>
+                    <input type="range" min="0" max="60" class="slider" id="aftp-outlet-pressure">
+                </div>
+            </div>
+            <div class="pumpcont">
+                <div class = 'pctitle'> Port Pump </div>
+                <button id="start-port-pump" class="button">Start Pump</button> 
+                <button id="stop-port-pump" class="button">Stop Pump</button>        
+                <div class="port-adj-container">
+                    <div class="slider__title">Ballast Flow</div> <div class="slider__value" id="port-adj-flow-value"></div>
+                    <input type="range" min="0" max="35" class="slider" id="port-flow">
+                    <div class="slider__title">Diff Pressure</div> <div class="slider__value" id="port-adj-dp-value"></div>
+                    <input type="range" min="0" max="30" class="slider" id="port-dp">
+                    <div class="slider__title">Out Pressure</div> <div class="slider__value" id="port-adj-op-value"></div>
+                    <input type="range" min="0" max="60" class="slider" id="port-outlet-pressure">
+
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment-with-locales.min.js"></script>
+        <script src="/scripts/bwts-classes.js"></script>
+        <script src="/scripts/bwts-vars.js"></script>
+        <script src="/scripts/bwts-plc1.js"></script>
+        <script src="/scripts/bwts-plc2.js"></script>
+        <script src="/scripts/bwts-plc3.js"></script>
+        <script src="/scripts/bwts-stbd.js"></script>
+        <script src="/scripts/bwts-port.js"></script>
+        <script src="/scripts/bwts-aftp.js"></script>
+        <script src="/scripts/bwts-screen.js"></script>
+        <script src="/scripts/bwts-render.js"></script>
+        <script src="/scripts/bwts-sim.js"></script>
+        <script src="/scripts/bwts-app.js"></script>
+    </body>
+</html>

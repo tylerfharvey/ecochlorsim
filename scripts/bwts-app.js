@@ -1,0 +1,3 @@
+initializeListeners()
+initializeSliders()
+bwtsSimulate()

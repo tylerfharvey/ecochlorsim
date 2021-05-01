@@ -1,0 +1,665 @@
+/* Base Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #333333;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+    color: #396684;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+/* Container */
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  padding: 0 0rem;
+}
+
+/* Header */
+
+.header {
+  background: #43799c;
+  color: white;
+  padding: 1.6rem 0;
+}
+
+.header__title {
+  font-size: 3.2rem;
+  margin-bottom: .4rem;
+}
+
+.header__subtitle {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+/* Actions Bar */
+
+.actions {
+    background-color: #F7F7F7;
+    border-bottom: 1px solid #dedfe0;
+    padding: .8rem
+}
+
+.actions__container {
+    align-items: center;
+    display: flex;
+    max-width: 60rem;
+    margin: 0 auto;
+    min-height: 3rem;
+    padding: 0 1.6rem;
+}
+
+.actions__container--spaced {
+    justify-content: space-between
+}
+
+/* Form Inputs */
+
+.input {
+    border: 1px solid #DEDFE0;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: 300;
+    height: 3rem;
+    margin-right: .8rem;
+    padding: .4rem .8rem;
+}
+
+.dropdown {
+    border-radius: 0;
+    border: 1px solid #DEDFE0;
+    background: white;
+    font-size: 1.4rem;
+    font-weight: 300;
+    height: 3rem;
+    margin-right: .8rem;
+}
+
+.button {
+    background: #43799c;
+    border: none;
+    border-bottom: 2px solid #396684;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding: .8rem;
+    transition: background .3s ease;
+}
+
+.button:hover {
+    background: #396684;
+}
+
+.button--secondary {
+    background: #888888;
+    border-bottom: 2px solid #717171;
+}
+
+.button--secondary:hover {
+    background: #6E6E6E;
+}
+
+/* hmi screen replication */
+
+.hmi {
+    position: relative;
+    height: 480px;
+    background: #000000;
+}
+
+.hmi-header {
+    position: absolute;
+    width: 800px;
+    top: 0px;
+    left: 0px;
+}
+
+.hmi-header__logo {
+    width: 110px;
+    height: 50px;
+    float: left;
+}
+
+.hmi-header__text {
+    width: 50px;
+    height: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    line-height: 25px;
+    float: left;
+}
+
+.hmi-header--textgyc15 {
+    width: 95px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-weight: 600;
+    float: left;
+    color: #000000;
+    background: #c6c3c6;
+}
+.hmi-header--textgrc15 {
+    width: 95px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-weight: 600;
+    float: left;
+    color: #000000;
+    background: #00ff00;
+}
+.hmi-header--textgrfc15 {
+    width: 95px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-weight: 600;
+    float: left;
+    color: #000000;
+    background: #00ff00;
+}
+.hmi-header--textrec15 {
+    width: 95px;
+    height: 25px;
+    line-height: 25px;
+    font-weight: 600;
+    text-align: center;
+    float: left;
+    color: #000000;
+    background: #ff0000;
+}
+.hmi-header--textrefc15 {
+    width: 95px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-weight: 600;
+    float: left;
+    color: #000000;
+    background: #ff0000;
+}
+.hmi-header--textlbc15 {
+    width: 95px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-weight: 600;
+    float: left;
+    color: #000000;
+    background: #9ccfff;
+}
+.hmi-header--textblc15 {
+    width: 95px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-weight: 600;
+    float: left;
+    color: #000000;
+    background: #0000ff;
+}
+.hmi-header--textblfc15 {
+    width: 95px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-weight: 600;
+    float: left;
+    color: #000000;
+    background: #0000ff;
+}
+.hmi-header__date {
+    width: 110px;
+    height: 25px;
+    font: tahoma;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 25px;
+    float: left;
+}
+
+.hmi-header__last-alarm {
+    width: 530px;
+    height: 25px;
+    font: tahoma;
+    font-size: 16px;
+    color: #000000;
+    text-align: left;
+    line-height: 25px;
+    border: 1px solid #ffffff;
+    float: left;
+}
+
+.hmi-header__time {
+    width: 110px;
+    height: 25px;
+    font: tahoma;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 25px;
+    float: left;
+}
+
+/* screen navigation menu */
+.hmi-menu {
+    position: absolute;
+    top: 55px;
+    left: 0px;
+    width: 800px;
+    z-index: 10;
+}
+
+.hmi-menu__button {
+    height: 25px;
+    width: 160px;
+    line-height: 21px;
+    background: #000000;
+    border: 2px solid #848484;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background .3s ease;  
+}
+
+.hmi-menu__button--current {
+    height: 25px;
+    width: 160px;
+    line-height: 21px;
+    background: #ffffff;
+    border: 2px solid #848484;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background .3s ease;  
+}
+
+.hmi-menu__button--blank {
+    height: 25px;
+    width: 160px;
+    line-height: 21px;
+    background: #000000;
+    font-size: 14px;
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+.hmi-menu__button--highlight {
+    height: 25px;
+    width: 160px;
+    line-height: 21px;
+    background: #FFFFFF;
+    color: #000000;
+    border: 2px solid #848484;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*hmi body */
+.hmi-body {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.hmi-body__image {
+    text-align: left;
+}
+
+/*opaque variable*/
+.hmi-body__variableop {
+    color: #000000;
+    font-size: 10px;
+    font-weight: bolder;
+    background: #848484;
+    text-align: center;
+}
+
+/*transparent variable*/
+.hmi-body__variabletr {
+    color: #000000;
+    font-size: 10px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.hmi-body__variablewhc15 {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+/* white Text */
+.hmi-body__textwh {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.hmi-body__textwhl15 {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: left;
+}
+
+.hmi-body__textwhc15 {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+/* black Text */
+.hmi-body__textbl{
+    color: #000000;
+    font-size: 12px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+/* green background black text*/
+.hmi-body__textgrc15{
+    color: #000000;
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: center;
+    background: #00ff00;
+}
+
+/* yellow background black text*/
+.hmi-body__textyec15{
+    color: #000000;
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: center;
+    background: #ffff00;
+}
+
+/* red background black text*/
+.hmi-body__textrec15{
+    color: #000000;
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: center;
+    background: #ff0000;
+}
+
+/* black border*/
+.hmi-body__bordera{
+    border: solid 1px #ffffff;
+}
+.hmi-body__bordert{
+    border-top: solid 1px #ffffff;
+}
+
+#hmi-body--images{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 800px;
+    height: 480px;
+}
+
+#hmi-body--text{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 800px;
+    height: 480px;
+}
+
+#hmi-body--variables{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 800px;
+    height: 480px;
+}
+
+#hmi-body--buttons{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 800px;
+    height: 480px;
+}
+
+/* hmi buttons */
+
+.hmi-buttons {
+    position: absolute;
+    left: 0px;
+    top: 421px;
+    width: 800px;
+    height: 78px;
+    float: left;
+}
+
+.hmi-buttons__button {
+    width: 70px;
+    height: 58px;
+    line-height: 58px;
+    margin: 1px;
+}
+
+.hmi-buttons__container {
+    width: 150px;
+    height: 78px;
+    float: right;
+}
+
+.hmi-buttons__screen-number {
+    width: 146px;
+    height: 29px;
+    background: #000000;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+
+}
+
+.hmi-buttons__vessel-name {
+    width: 146px;
+    height: 29px;
+    line-height: 29px;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+/* Note editor */
+
+.title-input {
+    border: 1px solid #DEDFE0;
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+    margin: 2.4rem 0;
+    padding: .8rem;
+    width: 100%;
+}
+
+.body-input {
+    border: 1px solid #DEDFE0;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 300;
+    display: block;
+    margin: 2.4rem 0;
+    min-height: 15rem;
+    padding: .8rem;
+    width: 100%;
+}
+
+.pumpcont {
+    width: 266px;
+    float: left;
+    border: solid 1px #000000;
+}
+
+.pctitle {
+    width: 100%;
+    text-align: center;
+}
+
+.slider__title {
+    float: left;
+}
+
+.slider__value {
+    float: right;
+}
+
+/* Slider */ 
+
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+  
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider-value {
+    float: right;
+
+}
+
+.alarm-dialog {
+    position: absolute;
+    top: 55px;
+    left: 0px;
+    background: #840000;
+    width: 800px;
+    border: 1px #000000 solid;
+    color: #ffffff;
+}
+.alarm-dialog__menu {
+    position: relative;
+    height: 20px;
+    background: #11182A;
+    width: 778px;
+    float: left;
+}
+
+.alarm-dialog__menu--close {
+    height: 20px;
+    background: #ffffff;
+    width: 20px;
+    color: #000000;
+    float: right;
+    text-align: center;
+}
+
+.alarm-dialog__header {
+    height: 20px;
+    background: #0000ff;
+    width: 800px;
+}
+
+.alarm-dialog__header--title {
+    position: relative;
+    float: left;
+    height: 100%;
+    background: #808080;
+    border: outset 1px #E7E3E7;
+    padding: 1px;
+    color: #000000;
+}
+
+.alarm-dialog__list {
+    padding: 2px;
+    height: 275px;
+    background: #840000;
+    width: 100%;
+    overflow-y: scroll;
+    border: groove 2px #E7E3E7;
+}
+
+.alarm-dialog__list--text {
+    height: 40px;
+    background: #840000;
+    float: left;
+}
+
+.alarm-dialog__list--textsel {
+    height: 40px;
+    background: #0000ff;
+    float: left;
+}
+
+
+.alarm-dialog__alarm {
+    height: 20px;
+    background: #00ffff;
+    width: 100%;
+}
+
+.alarm-dialog__alarm--selected {
+    height: 20px;
+    background: #00ffff;
+    width: 100%;
+}
+.alarm-dialog__footer {
+    height: 50px;
+    background: #840000;
+    width: 100%;
+}
